@@ -2,14 +2,14 @@ import axios from 'axios';
 import * as qs from 'qs';
 
 var data = qs.stringify({
-	client_id: '33m37fu1hih5u52b8gmb1as4c6',
-	client_secret: '1s2ebtssnvirc1kclkb9gve4kitiqioh00ik9lrb8to8sj5mit9j',
+	client_id: '2hchrq9nuvbg7rojh527smv7fq',
+	client_secret: '9i3qjkpjd5qvamq9lp7l2lvo1alfecobujrgmrfqt13bst0s6dg',
 	grant_type: 'client_credentials'
 });
 
 var config = {
 	method: 'post',
-	url: 'https://manutd.auth.eu-west-1.amazoncognito.com/token',
+	url: 'https://manutd.auth.eu-west-2.amazoncognito.com/token',
 	headers: {
 		'Content-Type': 'application/x-www-form-urlencoded'
 	},
