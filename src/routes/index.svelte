@@ -1,8 +1,20 @@
 <script>
-    import getToken from '../getToken'
-    getToken();
+import getData from '../getData.js'
+    const clubData = getData();
+  
 </script>
 
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+{#await clubData}
+<h1>Welcome!</h1>
+{:then clubData}
+<h1>Welcome to {clubData.TeamName}</h1>
+{#each clubData.Records as record, index}
+    <table>
+        <tr>
+          <td>{record.Record}</td>
+          <td>{record.Achievement}</td>
+        </tr>
+      </table>
+{/each}
+{/await}
 

@@ -17,12 +17,13 @@ var config = {
 };
 
 async function getToken() {
-	axios(config)
+	return axios(config)
 		.then((response) => {
-			console.log(JSON.stringify(response.data));
+			return(response.data.access_token);
 		})
 		.catch(function (error) {
 			console.log(error);
+			console.log('token error checkpoint')
 		});
 }
 
